@@ -1,0 +1,11 @@
+requests
+sqlalchemy
+psycopg2
+pyodbc
+PyYAML
+redis
+click
+numpy
+pandas
+gql
+pyarrow
