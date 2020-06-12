@@ -1,4 +1,4 @@
-# EI Data Tool
+# EI Util
 
 ## Content
 

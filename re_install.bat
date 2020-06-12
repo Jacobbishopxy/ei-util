@@ -1,4 +1,4 @@
-call activate py36
+call activate py38
 
 rmdir /s/q dist
 rmdir /s/q build
