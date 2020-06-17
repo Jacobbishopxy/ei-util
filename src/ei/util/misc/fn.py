@@ -55,3 +55,25 @@ def generate_weekends(start_date: str, end_date: str, formatter: str = __default
     date_series = __gen_dates(start_date, end_date)
     days = list(date_series[date_series.map(lambda x: True if x in [5, 6] else False)].index)
     return [timestamp_to_str(i, formatter) for i in days]
+
+
+def camel_to_underline(camel_format: str, init_letter_transfer: bool = False):
+    underline_format = ''
+    if isinstance(camel_format, str):
+        for i, s in enumerate(camel_format):
+            if init_letter_transfer:
+                underline_format += '_' + s.lower() if s.isupper() else s.lower()
+            else:
+                underline_format += '_' + s.lower() if s.isupper() and i != 0 else s.lower()
+    return underline_format
+
+
+def underline_to_camel(underline_format: str, init_letter_transfer: bool = False):
+    camel_format = ''
+    if isinstance(underline_format, str):
+        for i, s in enumerate(underline_format.split('_')):
+            if init_letter_transfer:
+                camel_format += s.capitalize()
+            else:
+                camel_format += s if i == 0 else s.capitalize()
+    return camel_format

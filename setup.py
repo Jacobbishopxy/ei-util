@@ -10,7 +10,7 @@ with open('requirements.txt', 'r') as f:
     install_reqs = [s for s in str_list if not s.startswith('#') and s != '']
 
 setup(name="ei.util",
-      version="0.0.1",
+      version="0.0.2",
       description="EI Util",
       author="Jacob Xie",
       author_email="jacobbishopxy@gmail.com",
